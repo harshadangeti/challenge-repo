@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2a5d84;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #2a5d84;
+      margin-bottom: 15px;
+    }
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .book-card {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    .book-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .book-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    button {
+      margin-top: 15px;
+      background: #2a5d84;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #234a6a;
+    }
+    footer {
+      background: #2a5d84;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>City Library</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to City Library</h2>
+      <p>Your gateway to knowledge, learning, and adventure. Explore thousands of books, digital resources, and more!</p>
+    </section>
+
+    <section id="catalog">
+      <h2>Book Catalog</h2>
+      <div class="book-list">
+        <div class="book-card">
+          <h3>The Great Gatsby</h3>
+          <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+          <p><strong>Genre:</strong> Fiction</p>
+        </div>
+        <div class="book-card">
+          <h3>1984</h3>
+          <p><strong>Author:</strong> George Orwell</p>
+          <p><strong>Genre:</strong> Dystopian</p>
+        </div>
+        <div class="book-card">
+          <h3>To Kill a Mockingbird</h3>
+          <p><strong>Author:</strong> Harper Lee</p>
+          <p><strong>Genre:</strong> Fiction</p>
+        </div>
+        <div class="book-card">
+          <h3>A Brief History of Time</h3>
+          <p><strong>Author:</strong> Stephen Hawking</p>
+          <p><strong>Genre:</strong> Science</p>
+        </div>
+        <!-- Add more books here -->
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>The City Library has been serving the community for over 50 years, providing access to books, digital media, events, and educational programs for all ages.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 City Library. All rights reserved.
+  </footer>
+
+  <script>
+    // Simple form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting us, ' + this.name.value + '!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
