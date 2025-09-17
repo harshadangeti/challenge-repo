@@ -1,0 +1,8 @@
+A library is an institution that collects, organizes, 
+and provides access to information and resources in various formats, 
+including books, digital media, and databases, for a defined community to use for reference, 
+research, and borrowing. They serve diverse communities, from public libraries to those within schools, 
+universities, or companies, and may exist as physical buildings or virtual spaces. Key library services include managing collections, 
+providing access to information, and assisting users with their needs through librarians and information professionals.  
+
+        
